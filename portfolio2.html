@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impossibol — Portfolio</title>
+  <meta name="description" content="Cybersecurity & Discord developer portfolio. Python, JavaScript, automation, and offensive security.">
+  <link rel="icon" type="image/png" href="icon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="gh-tooltip" id="tooltip" role="tooltip"></div>
+
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-logo"><span>~/</span>impossibol</div>
+  <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">about</a>
+    <a href="#github">github</a>
+    <a href="#skills">skills</a>
+    <a href="#projects">projects</a>
+    <a href="#build">build</a>
+    <a href="#contact">contact</a>
+  </div>
+  <div class="gh-status" id="nav-gh-status" aria-live="polite">
+    <div class="gh-status-dot"></div>
+    <span id="nav-gh-label">loading...</span>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">// discord developer · cybersecurity</div>
+    <h1 class="hero-name">
+      <span class="line1">Impos</span>
+      <span class="line2">sibol</span>
+    </h1>
+    <p class="hero-desc">
+      <span class="highlight">Python & JavaScript developer</span> based in 🇫🇷 France.<br/>
+      Building robust Discord bots & exploring the depths of cybersecurity.<br/>
+      Passionate about automation, offensive security, and clean code.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Contact me</a>
+    </div>
+    <!-- Scroll indicator intégré dans le flux -->
+    <div class="hero-scroll">
+      <span class="scroll-text">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-github-live">
+      <div class="gh-mini-stat">⭐ <span class="val" id="hero-stars">—</span> stars</div>
+      <div class="gh-mini-stat">📦 <span class="val" id="hero-repos">—</span> repos</div>
+      <div class="gh-mini-stat">👥 <span class="val" id="hero-followers">—</span> followers</div>
+      <div class="gh-mini-stat">🔥 <span class="val" id="hero-streak">live</span> GitHub</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-num">01.</span>
+    <h2 class="section-title">About me</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a passionate developer focused on building robust <strong>Discord bots</strong> and deepening my expertise in <strong>cybersecurity</strong>. I enjoy creating tools that are both technically solid and genuinely useful.</p>
+      <p>From automation systems to security-oriented applications, I take particular care in writing <strong>clean, maintainable code</strong> and I'm always looking to understand how systems work at a deeper level.</p>
+      <p>Currently working on <strong>Mayssou</strong>, a feature-rich Discord bot, and exploring offensive security through <strong>CTF challenges</strong> and OSINT techniques.</p>
+      <div class="about-stats">
+        <div class="stat-box reveal"><div class="stat-num" id="stat-repos">…</div><div class="stat-lbl">Repositories</div></div>
+        <div class="stat-box reveal"><div class="stat-num" id="stat-followers">…</div><div class="stat-lbl">Followers</div></div>
+        <div class="stat-box reveal"><div class="stat-num" id="stat-stars">…</div><div class="stat-lbl">Total Stars</div></div>
+        <div class="stat-box reveal"><div class="stat-num">∞</div><div class="stat-lbl">Curiosity</div></div>
+      </div>
+    </div>
+    <div class="about-card reveal">
+      <div class="code-line"><span class="code-ln">1</span><span class="code-comment">// impossibol.json</span></div>
+      <div class="code-line"><span class="code-ln">2</span><span class="code-brace">{</span></div>
+      <div class="code-line"><span class="code-ln">3</span>&nbsp;&nbsp;<span class="code-key">"name"</span><span class="code-brace">: </span><span class="code-str" id="json-name">"Impossibol"</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">4</span>&nbsp;&nbsp;<span class="code-key">"location"</span><span class="code-brace">: </span><span class="code-str">"France 🇫🇷"</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">5</span>&nbsp;&nbsp;<span class="code-key">"repos"</span><span class="code-brace">: </span><span class="code-str" id="json-repos">"..."</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">6</span>&nbsp;&nbsp;<span class="code-key">"followers"</span><span class="code-brace">: </span><span class="code-str" id="json-followers">"..."</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">7</span>&nbsp;&nbsp;<span class="code-key">"focus"</span><span class="code-brace">: [</span></div>
+      <div class="code-line"><span class="code-ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Cybersecurity"</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Automation"</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Bot Development"</span></div>
+      <div class="code-line"><span class="code-ln">11</span>&nbsp;&nbsp;<span class="code-brace">],</span></div>
+      <div class="code-line"><span class="code-ln">12</span>&nbsp;&nbsp;<span class="code-key">"os"</span><span class="code-brace">: </span><span class="code-str">"Linux / Hyprland"</span><span class="code-brace">,</span></div>
+      <div class="code-line"><span class="code-ln">13</span>&nbsp;&nbsp;<span class="code-key">"available"</span><span class="code-brace">: </span><span class="code-bool">true</span></div>
+      <div class="code-line"><span class="code-ln">14</span><span class="code-brace">}</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="github">
+  <div class="section-header reveal">
+    <span class="section-num">02.</span>
+    <h2 class="section-title">GitHub — Live</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="github-dashboard reveal">
+    <div class="gh-profile-card">
+      <div class="gh-sync-info">
+        <div class="gh-sync-dot"></div>
+        <span id="sync-time">Fetching data...</span>
+        <button class="refresh-btn" onclick="loadGitHub(true)" aria-label="Refresh GitHub data">↻ Refresh</button>
+      </div>
+      <div class="gh-profile-top">
+        <div class="gh-avatar"><img id="gh-avatar-img" src="" alt="GitHub avatar"/></div>
+        <div class="gh-profile-info">
+          <div class="gh-profile-name" id="gh-display-name">—</div>
+          <div class="gh-profile-login" id="gh-login">@Impossibol04</div>
+        </div>
+      </div>
+      <div class="gh-profile-bio" id="gh-bio">Loading...</div>
+      <div class="gh-profile-meta">
+        <div class="gh-meta-item">📍 <strong id="gh-location">—</strong></div>
+        <div class="gh-meta-item">🔗 <strong id="gh-blog">—</strong></div>
+        <div class="gh-meta-item">🗓️ Joined <strong id="gh-joined">—</strong></div>
+      </div>
+      <div class="gh-stats-row">
+        <div class="gh-stat"><div class="gh-stat-val" id="gh-repos-count">—</div><div class="gh-stat-lbl">Repos</div></div>
+        <div class="gh-stat"><div class="gh-stat-val" id="gh-followers-count">—</div><div class="gh-stat-lbl">Followers</div></div>
+        <div class="gh-stat"><div class="gh-stat-val" id="gh-following-count">—</div><div class="gh-stat-lbl">Following</div></div>
+      </div>
+    </div>
+
+    <div class="gh-langs-card">
+      <div class="gh-card-title">// Top Languages</div>
+      <div class="lang-bar-track" id="lang-bar"></div>
+      <div class="lang-list" id="lang-list">
+        <div class="gh-loading">Fetching languages<div class="gh-loading-dots"><span></span><span></span><span></span></div></div>
+      </div>
+    </div>
+
+    <div class="gh-activity-card">
+      <div class="gh-card-title">// Contribution Activity — Last 12 months (simulated from public data)</div>
+      <div class="gh-contrib-wrap">
+        <div class="gh-contrib-months" id="contrib-months"></div>
+        <div class="gh-contrib-grid" id="contrib-grid"></div>
+      </div>
+      <div class="gh-contrib-legend">
+        Less
+        <div class="gh-contrib-legend-boxes">
+          <div class="gh-contrib-day"></div>
+          <div class="gh-contrib-day" data-level="1"></div>
+          <div class="gh-contrib-day" data-level="2"></div>
+          <div class="gh-contrib-day" data-level="3"></div>
+          <div class="gh-contrib-day" data-level="4"></div>
+        </div>
+        More
+      </div>
+    </div>
+
+    <div class="gh-repos-card">
+      <div class="gh-card-title">// Recent Repositories</div>
+      <div class="gh-repos-grid" id="gh-repos-list">
+        <div class="gh-loading">Fetching repos<div class="gh-loading-dots"><span></span><span></span><span></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-header reveal">
+    <span class="section-num">03.</span>
+    <h2 class="section-title">Languages & Tools</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid reveal" id="skills-grid">
+    <!-- Les badges de langages seront injectés dynamiquement depuis GitHub -->
+    <div class="skill-badge"><span class="skill-icon">🎮</span><span class="skill-name">Discord.py</span></div>
+    <div class="skill-badge"><span class="skill-icon">📦</span><span class="skill-name">Git</span></div>
+    <div class="skill-badge"><span class="skill-icon">🐧</span><span class="skill-name">Linux</span></div>
+    <div class="skill-badge"><span class="skill-icon">🔓</span><span class="skill-name">Kali Linux</span></div>
+    <div class="skill-badge"><span class="skill-icon">🗄️</span><span class="skill-name">SQL</span></div>
+    <div class="skill-badge"><span class="skill-icon">🌐</span><span class="skill-name">Wireshark</span></div>
+    <div class="skill-badge"><span class="skill-icon">🔥</span><span class="skill-name">Burp Suite</span></div>
+    <div class="skill-badge"><span class="skill-icon">🧅</span><span class="skill-name">Tor</span></div>
+    <div class="skill-badge"><span class="skill-icon">💻</span><span class="skill-name">VS Code</span></div>
+  </div>
+  <div class="skills-categories reveal">
+    <div class="skill-cat">
+      <div class="skill-cat-title">// Development</div>
+      <div class="skill-cat-items">
+        <div class="skill-item"><span class="skill-item-name">Python</span></div>
+        <div class="skill-item"><span class="skill-item-name">JavaScript</span></div>
+        <div class="skill-item"><span class="skill-item-name">Node.js</span></div>
+        <div class="skill-item"><span class="skill-item-name">SQL</span></div>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title">// Cybersecurity</div>
+      <div class="skill-cat-items">
+        <div class="skill-item"><span class="skill-item-name">OSINT</span></div>
+        <div class="skill-item"><span class="skill-item-name">Wireshark</span></div>
+        <div class="skill-item"><span class="skill-item-name">Burp Suite</span></div>
+        <div class="skill-item"><span class="skill-item-name">Kali Linux</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-num">04.</span>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <div class="project-top">
+        <span class="project-icon">🤖</span>
+        <div class="project-top-right">
+          <span class="project-status status-live">live</span>
+          <div class="project-links"><a href="https://github.com/Impossibol04" target="_blank" rel="noopener">↗ GitHub</a></div>
+        </div>
+      </div>
+      <div class="project-name">Mayssou</div>
+      <div class="project-desc">Feature-rich Discord bot with advanced moderation, fun commands, utility tools and full music playback system with queue management.</div>
+      <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Discord.js</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-top">
+        <span class="project-icon">🌐</span>
+        <div class="project-top-right"><span class="project-status status-wip">in progress</span></div>
+      </div>
+      <div class="project-name">Personal Website</div>
+      <div class="project-desc">Personal portfolio and website currently in development. Built with modern web technologies.</div>
+      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-top">
+        <span class="project-icon">🔐</span>
+        <div class="project-top-right"><span class="project-status status-wip">in progress</span></div>
+      </div>
+      <div class="project-name">Cybersecurity Tool</div>
+      <div class="project-desc">Security-focused Python project currently in development. Details coming soon.</div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">Security</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-top">
+        <span class="project-icon">🛠️</span>
+        <div class="project-top-right">
+          <span class="project-status status-live">public</span>
+          <div class="project-links"><a href="https://github.com/Impossibol04/NitroGen" target="_blank" rel="noopener">↗ GitHub</a></div>
+        </div>
+      </div>
+      <div class="project-name">NitroGen</div>
+      <div class="project-desc">"The Most Useless Tool You'll Ever Download" — a fun shell project.</div>
+      <div class="project-tags"><span class="tag">Shell</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="build">
+  <div class="section-header reveal">
+    <span class="section-num">05.</span>
+    <h2 class="section-title">My Build</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="build-grid reveal">
+    <div class="build-card"><span class="build-icon">🐧</span><div class="build-info"><div class="build-label">OS</div><div class="build-value">Linux · Hyprland</div></div></div>
+    <div class="build-card"><span class="build-icon">🔵</span><div class="build-info"><div class="build-label">CPU</div><div class="build-value">Intel I5-14400F</div></div></div>
+    <div class="build-card"><span class="build-icon">🟢</span><div class="build-info"><div class="build-label">GPU</div><div class="build-value">NVIDIA GTX 1050</div></div></div>
+    <div class="build-card"><span class="build-icon">💾</span><div class="build-info"><div class="build-label">RAM</div><div class="build-value">16GB DDR4</div></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-wrap reveal">
+    <div class="contact-title">Get in touch</div>
+    <p class="contact-sub">Tu as un projet, une question, ou juste envie de discuter de cybersec ou de dev ? N'hésite pas à me contacter.</p>
+    <div class="contact-links">
+      <a href="mailto:impossibol004.pro@gmail.com" class="contact-link"><span class="icon">📧</span> impossibol004.pro@gmail.com</a>
+      <a href="https://github.com/Impossibol04" target="_blank" rel="noopener" class="contact-link"><span class="icon">🐙</span> GitHub</a>
+    </div>
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mlgopjzd" method="POST">
+      <input type="text" name="name" placeholder="Nom" required aria-label="Your name"/>
+      <input type="email" name="email" placeholder="Email" required aria-label="Your email"/>
+      <textarea name="message" rows="4" placeholder="Message" required aria-label="Your message"></textarea>
+      <button type="submit" class="btn-primary">Envoyer</button>
+      <div id="form-status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">Built by <span>Impossibol</span> · 2026</div>
+  <div class="footer-quote">"Security is not a product, but a process." — Bruce Schneier</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
