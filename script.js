@@ -276,7 +276,18 @@ async function loadGitHub(force = false) {
       list.appendChild(row);
     });
 
-
+    // Ajouter badges langages dans skills (supprimer les anciens)
+    const skillsGrid = document.getElementById('skills-grid');
+    document.querySelectorAll('.dynamic-lang-badge').forEach(b => b.remove());
+    sorted.slice(0, 4).forEach(([lang]) => {
+      const badge = document.createElement('div');
+      badge.className = 'skill-badge dynamic-lang-badge';
+      badge.innerHTML = `
+        <span class="skill-icon" style="font-size:18px; width:20px; height:20px; border-radius:50%; background:${langColor(lang)}; display:inline-block;"></span>
+        <span class="skill-name">${lang}</span>
+      `;
+      skillsGrid.prepend(badge);
+    });
 
     // Recent repos
     const reposList = document.getElementById('gh-repos-list');
