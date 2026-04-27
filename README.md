@@ -33,9 +33,4 @@ Pour réaliser ce projet, j'ai utilisé les technologies suivantes :
 
 ---
 
-## 👤 Auteur
-**Impossibol04**
-* GitHub : [@impossibol04](https://github.com/impossibol04)
-
----
-*Fait avec passion par Impossibol*
+> Développé avec passion ❤️ par [Impossibol](https://github.com/Impossibol04)
