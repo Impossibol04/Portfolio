@@ -4,6 +4,8 @@ Bienvenue sur le dépôt GitHub de mon portfolio en ligne. Ce projet présente m
 
 🔗 **[Voir le site en direct](https://impossibol04.github.io/Portfolio/)**
 
+## With the help of Claude AI !
+
 ---
 
 ## 🧐 À propos
